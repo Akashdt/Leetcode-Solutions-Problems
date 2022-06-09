@@ -1,19 +1,16 @@
-class Solution 
-{
-    public int[] twoSum(int[] numbers, int target)
+class Solution {
+    public int[] twoSum(int[] numbers, int target) 
     {
-         int n = numbers.length,i=0,j=n-1;
-        while(i<j)
+         int n = numbers.length;
+            
+        for(int i=0;i<n-1;i++)
         {
-            int sum = numbers[i] + numbers[j];
-            if(sum == target)
-                    
-               return  new int[]{i+1,j+1};
+           int pos = Arrays.binarySearch(numbers,i+1,n,target-numbers[i]);
            
-                if(sum > target)
-                    j--;
-            else i++;
+                if(pos>0) 
+                        
+                        return new int[]{i+1,pos+1};
         }
         return null;
     }
-}
+    }
