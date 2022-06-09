@@ -12,22 +12,24 @@ class Solution
 {
     public static void sort012(int arr[], int n)
     {
-         int i=0,l=0,r=n-1;
+         int low=0,mid=0,high=n-1;
        
-       while(i<=r){
-           if(arr[i]==1)i++;
-           else if(arr[i]==0){
-               int temp=arr[i];
-               arr[i]=arr[l];
-               arr[l]=temp;
-               i++;
-               l++;
+       while(low<=high){
+           if(arr[low]==1)
+           low++;
+           else if(arr[low]==0)
+           {
+               int temp=arr[low];
+               arr[low]=arr[mid];
+               arr[mid]=temp;
+               low++;
+               mid++;
            }
            else {
-              int temp=arr[i];
-              arr[i]=arr[r];
-              arr[r]=temp;
-              r--;
+              int temp=arr[low];
+              arr[low]=arr[high];
+              arr[high]=temp;
+              high--;
            }
        }
        
