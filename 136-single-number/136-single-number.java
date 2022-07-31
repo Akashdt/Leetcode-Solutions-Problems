@@ -1,9 +1,17 @@
 class Solution {
     public int singleNumber(int[] nums) {
-         int result = 0;
-        for (int curr : nums) {
-            result = result ^ curr;
+        HashSet <Integer> set = new HashSet<>();
+            for(int i:nums)
+    
+        {
+              if(set.contains(i)) set.remove(i);
+                    else
+                        set.add(i);    
         }
-        return result;
-    }
+            for(int i:set)
+            {
+                    return i;
+            }
+            return -1;
+}
 }
