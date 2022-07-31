@@ -1,20 +1,16 @@
 class Solution {
-    public int missingNumber(int[] nums) 
-    {
-         Arrays.sort(nums);
-        int l = 0;
-        int r = nums.length - 1;
-        int mid = 0;
-        while (true) 
-        {
-            mid = (l + r) / 2;
-            if (l > r)
-                return l;
-                
-            if (nums[mid] > mid)
-                r = mid - 1;
-            else
-                l = mid + 1;
+    public int missingNumber(int[] nums) {
+        HashSet <Integer> set = new HashSet<>();
+            for(int i:nums)
+            {
+                    set.add(i);
+                    
+            }
+            for(int i=0;i<=nums.length;i++)
+            {
+                    if (!set.contains(i))
+                            return i;
+            }
+            return -1;
     }
-}
 }
