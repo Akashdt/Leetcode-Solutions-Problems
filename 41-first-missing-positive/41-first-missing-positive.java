@@ -1,5 +1,7 @@
-class Solution {
-    public int firstMissingPositive(int[] v) {
+class Solution
+{
+    public int firstMissingPositive(int[] v) 
+    {
         Arrays.sort(v);
         int flag = 1;
         for (int i:v) 
