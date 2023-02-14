@@ -1,5 +1,2 @@
 # Write your MySQL query statement below
-SELECT   (CASE WHEN COUNT(salary) <1 THEN NULL
-        ELSE MAX(SALARY) END) AS SecondHighestSalary
-From Employee
-WHERE salary < (SELECT MAX(salary) FROM Employee)
+select max(salary) as SecondHighestSalary from Employee where salary < (select max(salary) from Employee) ;  
