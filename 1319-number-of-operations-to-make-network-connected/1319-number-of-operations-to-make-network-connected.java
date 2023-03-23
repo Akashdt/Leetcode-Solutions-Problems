@@ -4,15 +4,15 @@ class Solution {
 
         var pool = 0;
         for (var c: connections) {
-            if (!uf.union(c[0], c[1])) // if already connected add connection to pool
+            if (!uf.union(c[0], c[1])) 
                 ++pool;
         }
 
-        // check pool has enough connections for all exiting components
+        
         if (uf.count() - pool > 1)
             return -1;
 
-        return uf.count() - 1; // return existing components to union
+        return uf.count() - 1; 
     }
 }
 
