@@ -72,7 +72,10 @@ class Solution{
     Solution(Shop shop){
         this.shop = shop;
     }
-    static long find(int n, long k){
+ static long find(int n, long k){
+        // Return the number of chocolates Geek had
+        // enjoyed out of 'n' chocolates availabe in the
+        // 'shop'.
         
         long ans=0;
         HashMap<Integer,Integer> map = new HashMap<>();
@@ -111,4 +114,5 @@ class Solution{
         }
         return ans;
     }
+
 }
