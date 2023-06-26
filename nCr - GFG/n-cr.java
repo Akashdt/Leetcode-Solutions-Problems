@@ -25,6 +25,7 @@ class GFG{
 
 // User function Template for Java
 
+
 class Solution{
     static int nCr(int n, int r)
     {
